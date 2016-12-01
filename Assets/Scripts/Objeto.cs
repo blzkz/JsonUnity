@@ -14,6 +14,7 @@ public class Objeto : ISerializationCallbackReceiver {
     public string type;
     public string nombreSprite;
     public string rutaSprite;
+    public Beneficio beneficios;
 
     void ISerializationCallbackReceiver.OnBeforeSerialize() {}
 
@@ -21,6 +22,13 @@ public class Objeto : ISerializationCallbackReceiver {
     {
         this.rutaSprite = "Sprites/" + nombreSprite;
     }
+}
+
+[System.Serializable]
+public class Beneficio
+{
+    public int vida;
+    public int ataque;
 }
 
 [System.Serializable]
